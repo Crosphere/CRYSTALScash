@@ -1,0 +1,666 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border-radius: none;
+    background: none;
+    border: none;
+    font-family: 'Basis Grotesque Pro';
+
+}
+
+@font-face {
+    font-family: Ogg;
+    font-style: normal;
+    font-weight: 400;
+    src: url(../img/Ogg-Medium.woff) format('woff')
+}
+
+
+button {
+    cursor: pointer;
+}
+
+.inverted {
+    filter: invert(100) !important;
+}
+
+.container {
+    max-width: 1380px;
+    padding: 0 20px;
+    margin: auto;
+    height: 100%;
+    position: relative;
+}
+
+nav {
+    height: 86px;
+}
+
+nav .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.burger {
+    height: 20px;
+    width: 138px;
+    padding-right: 108px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.burger::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 30px;
+    height: 2px;
+    top: 0;
+    left: 0;
+    background: #000;
+}
+
+.burger::after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 30px;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background: #000;
+}
+
+.burger span {
+    width: 100%;
+    height: 2px;
+    background: #000;
+}
+
+.nav-title {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 16px;
+    letter-spacing: 0em;
+    text-transform: uppercase;
+
+}
+
+.nav-other {
+    display: flex;
+    justify-content: space-around;
+    width: 138px;
+    align-items: center;
+}
+
+.hero {
+    background: url(../img/pngbg.png);
+    height: 747px;
+}
+
+.hero .crystals {
+    height: 100%;
+    position: relative;
+    background: url("../img/Hero-bg.png");
+    background-size: cover;
+    background-position: center center;
+}
+
+h1 {
+    padding-top: 168px;
+    font-family: Ogg;
+    font-size: 118px;
+    font-weight: 400;
+    line-height: 120px;
+    letter-spacing: 0em;
+    text-align: center;
+
+}
+
+.shop-now {
+    width: 148.5px;
+    height: 148.5px;
+    border-radius: 50%;
+    background: #000;
+    font-family: Basis Grotesque Pro;
+    font-size: 20px;
+    color: white;
+    font-weight: 400;
+    line-height: 20px;
+    position: absolute;
+    text-align: center;
+    filter: invert(0);
+    transition: .2s;
+    bottom: 48.5px;
+    right: 0;
+}
+
+.shop-now:hover {
+    filter: invert(1);
+}
+
+.marquee-container {
+    overflow: hidden;
+    position: relative;
+    height: 86px;
+    display: flex;
+    align-items: center;
+    /* задаем высоту контейнера */
+    border-bottom: 1px solid #EAC1BF;
+    border-top: 1px solid #EAC1BF;
+}
+
+.marquee-content {
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 1px;
+
+    position: absolute;
+    white-space: nowrap;
+    /* отключаем перенос строк */
+    animation: marquee 15s linear infinite;
+}
+
+@keyframes marquee {
+    from {
+        transform: translateX(-100%);
+    }
+
+    to {
+        transform: translateX(120%);
+    }
+}
+
+.marquee-content span {
+    font-family: Roboto;
+    transition: .2s;
+}
+
+.marquee-content span:hover {
+    background-image: url("../img/forfill.png");
+    background-clip: text;
+    background-size: cover;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.info {
+    height: 900px;
+    border-bottom: 1px solid #EAC1BF;
+    background: linear-gradient(241.95deg, #FFFFFF 0.5%, rgba(255, 255, 255, 0) 80.8%), rgba(234, 193, 191, 0.64);
+}
+
+.info .container {
+    padding-top: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.info-text {
+    padding-top: 101px;
+}
+
+.info-text p {
+    font-family: Ogg;
+    font-size: 48px;
+    font-weight: 400;
+    line-height: 68px;
+    letter-spacing: 0em;
+    text-align: left;
+    width: 468.83px;
+    margin-bottom: 83px;
+    padding-left: 15px;
+}
+
+button.classic {
+    padding: 14px 36.5px;
+    background: #000;
+    filter: invert(0);
+    transition: .2s;
+    border-radius: 24px;
+    color: white;   
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: 0em;
+
+}
+
+button.classic:hover {
+    filter: invert(1);
+}
+
+.info-imgs {
+    position: relative;
+}
+
+.imgs-card {
+    position: absolute;
+    top: 70px;
+    left: 170px;
+}
+
+.reviews {
+    height: 960px;
+    padding-top: 195px;
+    border-bottom: 1px solid #EAC1BF;
+}
+
+.reviews .container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.review-img {
+    position: relative;
+    height: 609px;
+}
+
+.review-img button {
+    position: absolute;
+    opacity: 0.8;
+    left: 150px;
+    bottom: 32px;
+}
+
+.review-img button:hover {
+    scale: 1.2;
+}
+
+.from-user {
+    margin-top: 20px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.review-reviews {
+    padding: 77px 169.5px 0;
+}
+
+.review-text {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: center;
+    width: 232px;
+}
+
+.review-reviews img {
+    margin: 20px auto 38px;
+    display: block;
+}
+
+.popular {
+    height: 866px;
+    padding-top: 163px;
+    border-bottom: 1px solid #EAC1BF;
+
+}
+
+.popular .container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.rainbow {
+    background: url(../img/forfill.png) !important;
+    background-position: center center !important;
+    background-size: 250px !important;
+
+}
+
+.rainbow:hover {
+    filter: invert(0) !important;
+    background-position: unset !important;
+    background-size: 800px !important;
+
+}
+
+.color-list {
+    padding-top: 16px;
+}
+
+ul {
+    list-style: none;
+}
+
+.color-list ul div {
+    margin: 0 0 22px 50px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 1px;
+
+}
+
+.color-list ul li img {
+    width: 60px;
+}
+
+.color-list ul li {
+    font-family: Ogg;
+    font-size: 47px;
+    font-weight: 400;
+    line-height: 48px;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0em;
+    margin-bottom: 32px;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    position: relative;
+    width: 728px;
+}
+
+.card {
+    border: 1px solid #EAC1BF;
+    border-radius: 16px;
+    width: 347px;
+    height: 542px;
+    padding: 42px 0;
+    display: flex;
+    box-shadow: 0 0 0px rgba(0, 0, 0, 0.197);
+    transition: .2s;
+    flex-direction: column;
+    background: #fff;
+    justify-content: space-between;
+}
+
+.card-title {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 1px;
+}
+
+.card-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-price {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+.bgcrystals {
+    position: absolute;
+    left: 50px;
+    top: -300px;
+    z-index: -1;
+}
+
+.card:hover {
+    scale: 1.1;
+    box-shadow: 0 0 60px rgba(0, 0, 0, 0.197);
+}
+
+.icons {
+    height: 524px;
+    background: #FBF9F9;
+    border-bottom: 1px solid #EAC1BF;
+}
+
+.section-title {
+    font-family: Ogg;
+    font-size: 47px;
+    font-weight: 400;
+    line-height: 68px;
+    letter-spacing: 0em;
+    text-align: center;
+    padding-top: 98px;
+
+}
+
+.sides {
+    margin-top: 87px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.icon {
+    width: 102px;
+    transition: .1s;
+    height: 102px;
+    background: url(../img/iconbg.png);
+    background-size: 1000px;
+
+}
+
+.icon img {
+    width: 100%;
+}
+
+.icon-title {
+    margin-top: 27px;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 1px;
+    text-align: center;
+
+}
+
+.icon:hover {
+    background-size: 150px;
+    background-position: center center;
+
+}
+
+.gifts-section {
+    border-bottom: 1px solid #EAC1BF;
+    height: 922px;
+}
+
+.gifts-section .section-title {
+    margin-top: 50px;
+    font-size: 116px;
+    line-height: 120px;
+}
+
+.gift-name {
+    margin-top: 12px;
+    font-family: Ogg;
+    font-size: 46px;
+    font-weight: 400;
+    line-height: 48px;
+}
+
+.gifts {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 102px;
+}
+
+.gift-price {
+    margin-top: 13px;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0em;
+}
+
+.our-club {
+    padding: 63px 0;
+    border-bottom: 1px solid #EAC1BF;
+    height: 424px;
+    background: linear-gradient(270deg, #FFFFFF 45.52%, rgba(255, 255, 255, 0.58) 100%), #EAC1BF;
+}
+
+.our-club .container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.club-title {
+    font-family: Ogg;
+    width: 265px;
+    font-size: 48px;
+    font-weight: 400;
+    line-height: 56px;
+    letter-spacing: 0em;
+}
+
+.club-desc {
+    width: 249.57px;
+    margin: 24px 0;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0em;
+}
+
+.club-imgs {
+    display: flex;
+    gap: 25px;
+}
+.club-imgs img{
+    transition: .2s;
+}
+
+.kaity-g {
+    height: 727px;
+    position: relative;
+}
+
+.kaity-g .container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.stands {
+    position: absolute;
+    top: 31px;
+}
+
+.stand-first {
+    left: 0;
+}
+
+.stand-second {
+    right: 0;
+}
+
+.kaity-img {
+    width: fit-content;
+    margin: 0 auto 30px;
+}
+
+.kaitys-review {
+    margin: 187px auto 0px;
+}
+
+.kaity-text {
+    font-family: Ogg;
+    font-size: 46px;
+    font-weight: 400;
+    width: 614px;
+    line-height: 72px;
+    letter-spacing: 0em;
+    text-align: center;
+
+}
+
+.kaity-name {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 1px;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 30px 0 12px;
+}
+
+.weird-icon {
+    margin: auto;
+    width: fit-content;
+}
+
+.ura {
+    padding: 44px 0 41px;
+}
+
+.tag {
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 1px;
+    margin-bottom: 26px;
+}
+.just-images img{
+    transition: .2s;
+}
+.just-images {
+    display: flex;
+    justify-content: space-between;
+}
+.just-images img:hover{
+    scale: 1.1;
+}
+.big-crystals{
+    font-weight: 700;
+    font-size: 122px;
+}
+.big-crystals div{
+    margin-top: 30px;
+    width: fit-content;
+    display: inline-block;
+    cursor: pointer;
+    transition: .2s;
+}
+.big-crystals div:hover{
+    background-image: url("../img/forfill.png");
+    background-clip: text;
+    background-size: cover;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+.club-imgs img:hover{
+    scale: 1.1;
+}
+footer ul{
+    display: flex;
+    flex-wrap: wrap;
+    width: 825px;
+    align-items: stretch;
+    height: 80px;
+    margin-top: 110px;
+}
+footer ul li{
+    width: 165px;
+}
+footer ul li a{
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0em;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+footer{
+    background: url(../img/footer.png);
+    background-size: cover;
+}
+.copyright{
+    padding: 46px 0 76px;
+}
